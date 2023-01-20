@@ -13,4 +13,6 @@ app.get('/', async () => {
     return habits
 })
 
-app.listen({ port: 3333 }).then(() => { console.log("running") })
+const PORT = 3333
+
+app.listen({ port: PORT }).then(() => { console.log("Running on port: " + PORT) })
