@@ -1,0 +1,20 @@
+{
+  "name": "habits",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:HenriquePassarelli/habits_web.git",
+  "author": "Henrique Passarelli <71354731+HenriquePassarelli@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.1",
+    "prettier": "^2.8.3",
+    "react": "^18.2.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {}
+}

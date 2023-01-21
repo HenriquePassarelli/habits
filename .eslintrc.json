@@ -1,0 +1,99 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "prettier",
+        "react"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "prettier/prettier": [
+            "warn",
+            {
+                "endOfLine": "auto",
+                "semi": false,
+                "singleQuote": true,
+                "printWidth": 120,
+                "arrowParens": "always",
+                "noMixedOperators": "true"
+            },
+            {
+                "usePrettierrc": false
+            }
+        ],
+        "react/react-in-jsx-scope": "off",
+        "semi": [
+            2,
+            "never"
+        ],
+        "no-extra-semi": "warn",
+        "max-len": [
+            "warn",
+            {
+                "code": 120,
+                "ignoreUrls": true,
+                "ignoreTrailingComments": true,
+                "ignoreStrings":true,
+                "ignorePattern": "^import .*"
+            }
+        ],
+        "curly": [
+            "error",
+            "all"
+        ],
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off",
+        "no-mixed-operators": "off",
+        "no-tabs": [
+            "error",
+            {
+                "allowIndentationTabs": true
+            }
+        ],
+        "quotes": [
+            "warn",
+            "single",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ],
+        "lines-around-comment": [
+            "error",
+            {
+                "beforeBlockComment": false,
+                "afterBlockComment": false,
+                "beforeLineComment": false,
+                "afterLineComment": false,
+                "allowBlockStart": true,
+                "allowBlockEnd": true,
+                "allowObjectStart": true,
+                "allowObjectEnd": true,
+                "allowArrayStart": true,
+                "allowArrayEnd": true
+            }
+        ]
+    }
+}
