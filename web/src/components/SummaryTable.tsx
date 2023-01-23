@@ -1,6 +1,12 @@
 import HabitDay from './HabitDay'
+import { generateDatesFormBeginning } from '../utils/generate-dates-form-beginning'
 
 const weekDays = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+
+const summaryDates = generateDatesFormBeginning()
+
+const minimumSummaryDatesSize = 18 * 7 // 18 weeks
+const amountOfDaysToFill = minimumSummaryDatesSize - summaryDates.length
 
 const SummaryTable = () => {
   return (
@@ -15,8 +21,17 @@ const SummaryTable = () => {
           </div>
         ))}
       </div>
-      <div className="grid gr grid-rows-3 grid-flow-col gap-3">
-        <HabitDay />
+      <div className="grid grid-rows-7 grid-flow-col gap-3">
+        {summaryDates.map((day) => (
+          <HabitDay key={day.toISOString()} />
+        ))}
+        {amountOfDaysToFill > 0 &&
+          Array.from({ length: amountOfDaysToFill }).map((_, idx) => (
+            <div
+              key={idx}
+              className="w-10 h-10 bg-zinc-900 border-2 border-zinc-800 rounded-lg opacity-40 cursor-not-allowed"
+            />
+          ))}
       </div>
     </div>
   )
