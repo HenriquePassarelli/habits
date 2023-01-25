@@ -12,5 +12,8 @@ module.exports = {
       },
     },
   },
+  variants: {
+    transitionProperty: ['width'],
+  },
   plugins: [],
 }
